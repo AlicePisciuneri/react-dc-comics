@@ -1,8 +1,10 @@
+import dcLogo from '../assets/img/dc-logo.png'
+
 export default function AppHeader() {
     return (
         <header>
             <div className="logo">
-                <img src="/vite.svg" alt="logo DC" />
+                <img src={dcLogo} alt="logo DC" />
             </div>
             <nav>
                 <ul>

@@ -1,68 +1,135 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Importo il font da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* stile della pagina,font,azzero i margini,sfondo scuro testo bianco */
 body {
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1c1c1c;
+  /* sfondo scuro */
+  color: white;
+}
+
+/* header-creo una riga con logo a sinistra e menu a destra 
+justify-content:space-bet. align items:center allineo verticalmente
+ */
+header {
+  background-color: white;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  /* logo a sinistra, nav a destra */
+  padding: 0 3rem;
+  /* spazio ai lati */
+  height: 100px;
+  /* spessore fisso */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+/*uso selettore per tutti gli ul dentro nav e solo gli a che stanno dentro li*/
+
+header .logo img {
+  height: 50px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+
+
+/* jumbotron-SEZIONE SCURA A TUTTO SCHERMO-TESTO centrato
+font piu grande-LASCIO SPAZIO PER CARD(?) */
+.jumbotron {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+  font-size: 1.5rem;
+}
+
+/* barra blu */
+.blue-bar {
+  background-color: #0282f9;
+  color: white;
+  padding: 1.5rem 0;
+}
+
+.blue-bar ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blue-bar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* footer */
+footer {
+  background-color: #303030;
+  padding: 2rem;
+}
+
+.footer-top {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.footer-top h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.footer-top ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-top ul li {
+  margin: 0.3rem 0;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid gray;
+  padding-top: 1rem;
+}
+
+.footer-bottom button {
+  background-color: transparent;
+  border: 2px solid #0282f9;
+  color: white;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-weight: bold;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.footer-bottom .social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-bottom .social span {
+  margin-right: 1rem;
 }
