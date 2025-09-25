@@ -1,19 +1,26 @@
+import comics from "../comics.js";
+import ProductCard from "./ProductCard.jsx";
+
 export default function AppMain() {
     return (
         <main>
-            <div className="jumbotron">
-                <p>--&gt; Content goes here  &lt;--</p>
-            </div>
+            {/* Titolo */}
+            <h2 className="section-title">Current Series</h2>
 
-            <section className="blue-bar">
-                <ul>
-                    <li><a href="#">Digital Comics</a></li>
-                    <li><a href="#">DC Merchandise</a></li>
-                    <li><a href="#">Subscription</a></li>
-                    <li><a href="#">Comic Shop Locator</a></li>
-                    <li><a href="#">DC Power Visa</a></li>
-                </ul>
-            </section>
+            {/* Container card */}
+            <div className="cards-container">
+                {comics.map((comic, index) => (
+                    <ProductCard
+                        key={index}
+                        thumb={comic.thumb}
+                        price={comic.price}
+                        series={comic.series}
+                        type={comic.type}
+                    />
+                ))}
+            </div>
         </main>
-    )
+    );
 }
+
+

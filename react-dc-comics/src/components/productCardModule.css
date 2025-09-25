@@ -1,0 +1,44 @@
+/* Griglia delle card */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Stile singola card */
+.product-card {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.product-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.product-card p {
+    margin: 0.3rem 0;
+    color: #ccc;
+}
+
+.product-card .price {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #0282f9;
+}
