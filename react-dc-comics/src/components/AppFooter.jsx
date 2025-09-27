@@ -1,3 +1,9 @@
+// Importo le immagini social dalla cartella assets/img
+import facebook from "../assets/img/footer-facebook.png";
+import twitter from "../assets/img/footer-twitter.png";
+import youtube from "../assets/img/footer-youtube.png";
+import pinterest from "../assets/img/footer-pinterest.png";
+import periscope from "../assets/img/footer-periscope.png";
 
 export default function AppFooter() {
     const dcComics = [
@@ -57,11 +63,11 @@ export default function AppFooter() {
                 <button>SIGN-UP NOW!</button>
                 <div className="social">
                     <span>FOLLOW US</span>
-                    <i className="fa-brands fa-facebook"></i>
-                    <i className="fa-brands fa-twitter"></i>
-                    <i className="fa-brands fa-youtube"></i>
-                    <i className="fa-brands fa-pinterest"></i>
-                    <i className="fa-solid fa-location-dot"></i>
+                    <img src={facebook} alt="Facebook" />
+                    <img src={twitter} alt="Twitter" />
+                    <img src={youtube} alt="YouTube" />
+                    <img src={pinterest} alt="Pinterest" />
+                    <img src={periscope} alt="Periscope" />
                 </div>
             </div>
         </footer>
@@ -70,12 +76,11 @@ export default function AppFooter() {
 
 
 
-
 //nel footer non abbiamo un solo array ma più sezioni diverse:dcComics → link della colonna “DC COMICS”
 //shop → link della colonna “SHOP”
 //dc → link della colonna “DC”
 //sites → link della colonna “SITES”, Ognuno è un array separato.
-//quando scrivo {shop.map((link, i) => (
+//quando scrivo {shop.map((link, index) => (
 //<li key={i}>{link}</li>
 // )/)}
 

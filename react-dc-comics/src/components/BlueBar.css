@@ -1,0 +1,23 @@
+.blue-bar {
+    background-color: #0282f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px 0;
+}
+
+.blue-bar .item {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.blue-bar .item img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
