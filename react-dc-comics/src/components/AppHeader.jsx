@@ -1,29 +1,22 @@
-
-import dcLogo from '../assets/img/dc-logo.png'
+import dcLogo from '../assets/img/dc-logo.png';
 
 export default function AppHeader() {
-    const headerLinks = [
-        "Characters",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Collectibles",
-        "Videos",
-        "Fans",
-        "News",
-        "Shop"
+    // Array con le voci del menu
+    const menuLinks = [
+        "Characters", "Comics", "Movies", "TV",
+        "Games", "Collectibles", "Videos", "Fans",
+        "News", "Shop"
     ];
 
     return (
-        <header>
+        <header className="site-header">
             <div className="logo">
-                <img src="./assets/img/dc-logo.png" alt="logo DC" />
+                <img src={dcLogo} alt="DC Logo" />
             </div>
             <nav>
                 <ul>
-                    {headerLinks.map((link, index) => (
-                        <li key={index}>
+                    {menuLinks.map((link, i) => (
+                        <li key={i}>
                             <a href="#">{link}</a>
                         </li>
                     ))}
