@@ -3,6 +3,8 @@ import AppMain from "./components/AppMain.jsx";
 import AppFooter from "./components/AppFooter.jsx";
 import ProductCard from "./components/ProductCard.jsx";
 import comics from "./comics.js";
+import BlueBar from "./components/BlueBar.jsx";
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           />
         ))}
       </main>
+      <BlueBar />
 
       <AppFooter />
     </>
