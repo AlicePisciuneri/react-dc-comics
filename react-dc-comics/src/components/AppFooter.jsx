@@ -1,37 +1,53 @@
+export default function AppFooter()
 export default function AppFooter() {
+    // Array per ogni colonna del footer
+    const dcComics = [
+        "Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"
+    ];
+    const shop = [
+        "Shop DC", "Shop DC Collectibles"
+    ];
+    const dc = [
+        "Terms Of Use", "Privacy Policy", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talent Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"
+    ];
+    const sites = [
+        "DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"
+    ];
+
     return (
         <footer>
             <div className="footer-top">
                 <div>
                     <h4>DC COMICS</h4>
                     <ul>
-                        <li>Characters</li>
-                        <li>Comics</li>
-                        <li>Movies</li>
-                        <li>TV</li>
-                        <li>Games</li>
-                        <li>Videos</li>
-                        <li>News</li>
+                        {dcComics.map((link, i) => (
+                            <li key={i}>{link}</li>
+                        ))}
+                    </ul>
+
+                    <h4>SHOP</h4>
+                    <ul>
+                        {shop.map((link, i) => (
+                            <li key={i}>{link}</li>
+                        ))}
                     </ul>
                 </div>
+
                 <div>
                     <h4>DC</h4>
                     <ul>
-                        <li>Terms Of Use</li>
-                        <li>Privacy Policy</li>
-                        <li>Ad Choices</li>
-                        <li>Advertising</li>
-                        <li>Jobs</li>
+                        {dc.map((link, i) => (
+                            <li key={i}>{link}</li>
+                        ))}
                     </ul>
                 </div>
+
                 <div>
                     <h4>SITES</h4>
                     <ul>
-                        <li>DC</li>
-                        <li>MAD Magazine</li>
-                        <li>DC Kids</li>
-                        <li>DC Universe</li>
-                        <li>DC Power Visa</li>
+                        {sites.map((link, i) => (
+                            <li key={i}>{link}</li>
+                        ))}
                     </ul>
                 </div>
             </div>
@@ -44,9 +60,22 @@ export default function AppFooter() {
                     <i className="fa-brands fa-twitter"></i>
                     <i className="fa-brands fa-youtube"></i>
                     <i className="fa-brands fa-pinterest"></i>
-                    <i className="fa-brands fa-map-pin"></i>
+                    <i className="fa-solid fa-location-dot"></i>
                 </div>
             </div>
         </footer>
-    )
+    );
 }
+
+
+
+//nel footer non abbiamo un solo array ma più sezioni diverse:dcComics → link della colonna “DC COMICS”
+//shop → link della colonna “SHOP”
+//dc → link della colonna “DC”
+//sites → link della colonna “SITES”, Ognuno è un array separato.
+//quando scrivo {shop.map((link, i) => (
+//<li key={i}>{link}</li>
+// )/)}
+
+//React prende ogni elemento di shop ("Shop DC", "Shop DC Collectibles")
+//e lo trasforma in <li> → <li>Shop DC</li>, <li>Shop DC Collectibles</li>
